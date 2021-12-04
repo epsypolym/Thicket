@@ -87,7 +87,7 @@ namespace Thicket
             SpawnRequirements(levelname);
             var scene = GameObject.Instantiate(levelbundle.LoadAsset<GameObject>(levelname));
             var pmc = GameObject.Find("Player/Main Camera");
-            MelonLoader.MelonCoroutines.Start(enablethelevelshit());
+            StartCoroutine(enablethelevelshit());
 
             if(tsi.skyboxtexture == null)
             {

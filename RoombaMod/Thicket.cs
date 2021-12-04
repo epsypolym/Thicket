@@ -1,24 +1,25 @@
-﻿using MelonLoader;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using BepInEx;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Harmony;
 
 namespace Thicket
 {
     public static class BuildInfo
     {
-        public const string Name = "Thicket"; // Name of the Mod.  (MUST BE SET)
-        public const string Author = "epsypolym"; // Author of the Mod.  (Set as null if none)
-        public const string Company = null; // Company that made the Mod.  (Set as null if none)
-        public const string Version = "1.0.0"; // Version of the Mod.  (MUST BE SET)
-        public const string DownloadLink = null; // Download Link for the Mod.  (Set as null if none)
+        public const string Name = "Thicket";
+        public const string Author = "epsypolym";
+        public const string Company = null;
+        public const string Guid = "epsypolym.ultrakill.thicket";
+        public const string Version = "1.0.0";
     }
 
-    public class Thicket : MelonMod
+    [BepInPlugin(BuildInfo.Guid, BuildInfo.Name, BuildInfo.Version)]
+    public class Thicket : BaseUnityPlugin
     {
         public static string modsdir;
         public static string commondir;
@@ -45,15 +46,16 @@ namespace Thicket
         public static string targetbundle;
         public static string targetlevel;
 
-        public override void OnApplicationStart()
+        public void Start()
         {
             modsdir = Directory.GetParent(Application.dataPath).ToString() + "\\Mods";
             commondir = Directory.GetParent(Application.dataPath).ToString() + "\\ULTRAKILL_Data\\StreamingAssets";
+
+            SceneManager.activeSceneChanged += OnLevelLoad;
         }
 
-
-        public override void OnLevelWasLoaded(int level)
-        {
+        private void OnLevelWasLoaded(int level) {
+            Debug.Log("AAAAAAAAAAH");
             //nuke all bundles because unity (works fine though c: )
             try { AssetBundle.UnloadAllAssetBundles(false); }
             catch { }
@@ -68,8 +70,10 @@ namespace Thicket
             }
         }
 
-        public override void OnLevelWasInitialized(int level)
+
+        public void OnLevelLoad(Scene a, Scene b)
         {
+            Debug.Log("NOOOOOOOOOO");
             psxunlit = Shader.Find("psx/unlit/unlit");
             loadnewlevel = false;
             FinalerPit.userinput = false;
@@ -98,7 +102,7 @@ namespace Thicket
         }
 
 
-        public override void OnUpdate()
+        public void Update()
         {
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.End))
