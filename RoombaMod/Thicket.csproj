@@ -34,216 +34,381 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="MelonLoader">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\MelonLoader\MelonLoader.dll</HintPath>
+    <Reference Include="Facepunch.Steamworks.Win64, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="NavMeshComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\NavMeshComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="NewBlood.LegacyInput, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\NewBlood.LegacyInput.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Internals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Xml.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Xml.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    <Reference Include="System.Xml.XPath.XDocument, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.Advertisements.dll</HintPath>
+    <Reference Include="TwitchLib.Api, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AIModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Core, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Core.Enums, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Core.Enums.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Core.Interfaces, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Core.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ARModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Core.Models, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Core.Models.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Helix, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Helix.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.Helix.Models, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.Helix.Models.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ClothModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.V5, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.V5.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    <Reference Include="TwitchLib.Api.V5.Models, Version=3.2.4.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Api.V5.Models.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+    <Reference Include="TwitchLib.Client, Version=3.2.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Client.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="TwitchLib.Client.Enums, Version=3.2.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Client.Enums.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    <Reference Include="TwitchLib.Client.Models, Version=3.2.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Client.Models.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    <Reference Include="TwitchLib.Communication, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Communication.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    <Reference Include="TwitchLib.PubSub, Version=3.2.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.PubSub.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    <Reference Include="TwitchLib.Unity, Version=1.0.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\TwitchLib.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.GridModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+    <Reference Include="Unity.Analytics.DataPrivacy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+    <Reference Include="Unity.Analytics.StandardEvents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    <Reference Include="Unity.Analytics.Tracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    <Reference Include="Unity.InputSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.InputSystem.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    <Reference Include="Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.ProBuilder.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.InputModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.KdTree, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.ProBuilder.KdTree.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.Poly2Tri, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.ProBuilder.Poly2Tri.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.Stl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.ProBuilder.Stl.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Monetization">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.Monetization.dll</HintPath>
+    <Reference Include="Unity.ProGrids, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.ProGrids.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    <Reference Include="Unity.Timeline, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+    <Reference Include="UnityEngine.Advertisements, Version=3.5.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.Purchasing.dll</HintPath>
+    <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    <Reference Include="UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SpatialTracking.dll</HintPath>
+    <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ARModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    <Reference Include="UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TLSModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+    <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.GridModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UI.dll</HintPath>
+    <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UNETModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+    <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.InputModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    <Reference Include="UnityEngine.Monetization, Version=3.5.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.Monetization.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VFXModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+    <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VRModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+    <Reference Include="UnityEngine.SpatialTracking, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.WindModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+    <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.XRModule">
-      <HintPath>D:\Steam\steamapps\common\ULTRAKILL\ULTRAKILL_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+    <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityUIExtensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>E:\Steam Games\steamapps\common\ULTRAKILL HALLOWEEN MOD\ULTRAKILL_Data\Managed\UnityUIExtensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
