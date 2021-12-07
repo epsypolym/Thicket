@@ -7,7 +7,6 @@ namespace Thicket {
         [HarmonyPrefix]
         public static void Prefix(PostProcessV2_Handler __instance) {
             typeof(PostProcessV2_Handler).GetField("mainCam", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(__instance, MonoSingleton<CameraController>.Instance.cam);
-            Debug.Log("xD");
         }
     }
 }
