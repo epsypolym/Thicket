@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using BepInEx;
+using HarmonyLib;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -45,6 +46,13 @@ namespace Thicket
         public GameObject frl;
         public static string targetbundle;
         public static string targetlevel;
+
+        
+        
+        internal void Awake() {
+            var harmony = new Harmony(BuildInfo.Guid); // rename "author" and "project"
+            harmony.PatchAll();
+        }
 
         public void Start()
         {

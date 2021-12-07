@@ -29,7 +29,7 @@ namespace Thicket
         }
 
         public void SpawnRequirements(string levelname) {
-            GameObject go = new GameObject("e");
+            GameObject go = new GameObject("ee");
             go.SetActive(false);
             tsi = levelbundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
 
@@ -59,7 +59,7 @@ namespace Thicket
             // FIRST ROOM SPAWN AND POSITION
 
             //firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
-            firstroom = new GameObject("First Room");
+            /*firstroom = new GameObject("First Room");
             firstroom.SetActive(false);
             firstroom.transform.position = tsi.firstroomtransformposition;
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
@@ -67,7 +67,11 @@ namespace Thicket
             firstroom.AddComponent<FirstRoomPrefab>();
             var php = firstroom.AddComponent<PlaceholderPrefab>();
             php.uniqueId = "12827f45-deb2-4f7b-9c1b-dead37f0a7f8";
-            firstroom.SetActive(true);
+            firstroom.SetActive(true);*/
+            firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
+            firstroom.transform.position = tsi.firstroomtransformposition;
+            firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
+            firstroom.transform.parent = go.transform;
 
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
             finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"), go.transform);
@@ -87,6 +91,16 @@ namespace Thicket
             Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
             ls.levelName.text = tsi.levelname;
+            
+            go.SetActive(true);
+            
+            //Invoke("CallShit", 0.5f);
+        }
+
+        public void CallShit() {
+            FindObjectOfType<CameraController>().SendMessage("Awake");
+            FindObjectOfType<PostProcessV2_Handler>().SendMessage("Start");
+            typeof(PostProcessV2_Handler).GetField("mainCam", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(MonoSingleton<CameraController>.Instance, MonoSingleton<CameraController>.Instance.cam);
         }
 
         public void ConstructLevel(string levelname)

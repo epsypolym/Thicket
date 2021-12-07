@@ -152,6 +152,7 @@
   <ItemGroup>
     <Compile Include="EnemySpawner.cs" />
     <Compile Include="Orphanise.cs" />
+    <Compile Include="PostProcessFixer.cs" />
     <Compile Include="ReflectionExtensions.cs" />
     <Compile Include="FinalerPit.cs" />
     <Compile Include="SceneConstructor.cs" />
