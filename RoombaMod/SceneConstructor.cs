@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Discord;
 using UnityEngine;
 
 namespace Thicket
@@ -27,8 +28,9 @@ namespace Thicket
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
         }
 
-        public void SpawnRequirements(string levelname)
-        {
+        public void SpawnRequirements(string levelname) {
+            GameObject go = new GameObject("e");
+            go.SetActive(false);
             tsi = levelbundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
 
             var preload = new GameObject("preload");
@@ -41,7 +43,7 @@ namespace Thicket
             smi.layerName = tsi.layername;
             smi.levelName = tsi.levelname;
 
-            var sman = GameObject.Instantiate(common.LoadAsset<GameObject>("StatsManager"));
+            var sman = GameObject.Instantiate(common.LoadAsset<GameObject>("StatsManager"), go.transform);
             var statman = sman.GetComponent<StatsManager>();
 
             statman.killRanks = tsi.killRanks;
@@ -56,12 +58,19 @@ namespace Thicket
 
             // FIRST ROOM SPAWN AND POSITION
 
-            firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"));
+            //firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
+            firstroom = new GameObject("First Room");
+            firstroom.SetActive(false);
             firstroom.transform.position = tsi.firstroomtransformposition;
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
+            firstroom.transform.parent = go.transform;
+            firstroom.AddComponent<FirstRoomPrefab>();
+            var php = firstroom.AddComponent<PlaceholderPrefab>();
+            php.uniqueId = "12827f45-deb2-4f7b-9c1b-dead37f0a7f8";
+            firstroom.SetActive(true);
 
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
-            finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"));
+            finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"), go.transform);
             finalroom.transform.position = tsi.finalroomtransformposition;
             finalroom.transform.rotation = Quaternion.Euler(tsi.finalroomtransformrotation);
             finalroom.transform.GetChild(0).GetChild(4).gameObject.SetActive(true); // open final room doors (handle via trigger later)
@@ -78,7 +87,6 @@ namespace Thicket
             Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
             ls.levelName.text = tsi.levelname;
-
         }
 
         public void ConstructLevel(string levelname)

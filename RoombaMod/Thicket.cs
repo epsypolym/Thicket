@@ -51,10 +51,11 @@ namespace Thicket
             modsdir = Directory.GetParent(Application.dataPath).ToString() + "\\Mods";
             commondir = Directory.GetParent(Application.dataPath).ToString() + "\\ULTRAKILL_Data\\StreamingAssets";
 
+            SceneManager.sceneLoaded += OnLevelLoaded;
             SceneManager.activeSceneChanged += OnLevelLoad;
         }
 
-        private void OnLevelWasLoaded(int level) {
+        private void OnLevelLoaded(Scene level, LoadSceneMode mode) {
             Debug.Log("AAAAAAAAAAH");
             //nuke all bundles because unity (works fine though c: )
             try { AssetBundle.UnloadAllAssetBundles(false); }
