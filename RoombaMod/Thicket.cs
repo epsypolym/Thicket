@@ -24,6 +24,7 @@ namespace Thicket
     {
         public static string modsdir;
         public static string commondir;
+        public static string ggmdir;
         public GameObject roombaprefab;
         public GameObject preload;
         public GameObject dust2;
@@ -56,7 +57,7 @@ namespace Thicket
 
         public void Start()
         {
-            modsdir = Directory.GetParent(Application.dataPath).ToString() + "\\Mods";
+            modsdir = Directory.GetParent(Application.dataPath).ToString() + "\\BepInEx\\plugins";
             commondir = Directory.GetParent(Application.dataPath).ToString() + "\\ULTRAKILL_Data\\StreamingAssets";
 
             SceneManager.sceneLoaded += OnLevelLoaded;
@@ -122,7 +123,7 @@ namespace Thicket
             }
             if (UnityEngine.Input.GetKeyDown(KeyCode.PageDown))
             {
-                LoadLevel("roomba.unity3d", "dust2prefab.prefab");
+                LoadLevel("roomba.unity3d", "minosmap1.prefab");
             }
             if (loadnewlevel && UnityEngine.Input.GetKeyDown(KeyCode.Mouse0) && levelstatthing.activeSelf)
             {

@@ -15,6 +15,7 @@ namespace Thicket
         public GameObject lsc;
         public AssetBundle levelbundle;
         public AssetBundle common;
+        public AssetBundle ggm;
         public GameObject preload;
         public GameObject firstroom;
         public GameObject finalroom;
@@ -28,7 +29,8 @@ namespace Thicket
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
         }
 
-        public void SpawnRequirements(string levelname) {
+        public void SpawnRequirements(string levelname) 
+        {
             GameObject go = new GameObject("ee");
             go.SetActive(false);
             tsi = levelbundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
@@ -45,6 +47,7 @@ namespace Thicket
 
             var sman = GameObject.Instantiate(common.LoadAsset<GameObject>("StatsManager"), go.transform);
             var statman = sman.GetComponent<StatsManager>();
+            statman.secretObjects = new GameObject[] { };
 
             statman.killRanks = tsi.killRanks;
             statman.styleRanks = tsi.styleRanks;
@@ -73,6 +76,7 @@ namespace Thicket
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
             firstroom.transform.parent = go.transform;
 
+
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
             finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"), go.transform);
             finalroom.transform.position = tsi.finalroomtransformposition;
@@ -81,26 +85,39 @@ namespace Thicket
             Component.Destroy(finalroom.transform.GetChild(5).GetChild(8).gameObject.GetComponent<FinalPit>()); // DESTROY FINAL PIT - DO NOT ENABLE - RISK OF SAVE CORRUPTION
             finalerpit = finalroom.transform.GetChild(5).GetChild(8).gameObject.AddComponent<FinalerPit>(); // add finaler pit level transitioner
 
+            //!!!!!
+            //!!!!!  THIS BREAKS EE ENABLE ON LINE 99!!!! //
+            //!!!!!
+
 
             //enable level stats
-            lsc = GameObject.Find("Canvas/Level Stats Controller");
-            var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
-            ReflectionExtensions.SetPrivate(ls, "ready", true);
+            //lsc = GameObject.Find("Canvas/Level Stats Controller");
+            //var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
+            //ReflectionExtensions.SetPrivate(ls, "ready", true);
 
-            Component.Destroy(GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<LevelNameFinder>()); // destroy this so level end text is correct
-            Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
-            GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
-            ls.levelName.text = tsi.levelname;
+            //Component.Destroy(GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<LevelNameFinder>()); // destroy this so level end text is correct
+            //Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
+            //GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
+            //ls.levelName.text = tsi.levelname;
             
             go.SetActive(true);
-            
-            //Invoke("CallShit", 0.5f);
+            GameObject.Find("GameController").GetComponent<AudioMixerController>().SendMessage("Awake");
+            GameObject.Find("GameController").GetComponent<AudioMixerController>().SendMessage("Awake");
+            GameObject.Find("GameController").GetComponent<AudioMixerController>().SendMessage("Awake");
+            GameObject.Find("GameController").GetComponent<AudioMixerController>().SendMessage("Awake");
+
         }
 
-        public void CallShit() {
-            FindObjectOfType<CameraController>().SendMessage("Awake");
-            FindObjectOfType<PostProcessV2_Handler>().SendMessage("Start");
-            typeof(PostProcessV2_Handler).GetField("mainCam", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(MonoSingleton<CameraController>.Instance, MonoSingleton<CameraController>.Instance.cam);
+        IEnumerator CallShit() 
+        {
+            yield return new WaitForSeconds(0.25f);
+            //test
+            GameObject.Find("Player/Main Camera").GetComponent<CameraController>().enabled = true;
+            GameObject.Find("Player/Main Camera").GetComponent<CameraController>().SendMessage("Awake");
+            GameObject.Find("GameController").GetComponent<PostProcessV2_Handler>().SendMessage("Start");
+            //var sman = GameObject.Find("StatsManager(Clone)").GetComponent<StatsManager>();
+            //sman.enabled = true;
+            //typeof(PostProcessV2_Handler).GetField("mainCam", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(MonoSingleton<CameraController>.Instance, MonoSingleton<CameraController>.Instance.cam);
         }
 
         public void ConstructLevel(string levelname)
@@ -109,7 +126,7 @@ namespace Thicket
             SpawnRequirements(levelname);
             var scene = GameObject.Instantiate(levelbundle.LoadAsset<GameObject>(levelname));
             var pmc = GameObject.Find("Player/Main Camera");
-            StartCoroutine(enablethelevelshit());
+            //StartCoroutine(enablethelevelshit());
 
             if(tsi.skyboxtexture == null)
             {
@@ -125,10 +142,16 @@ namespace Thicket
                 psky.material = joe;
             }
 
+
+
             levelbundle.Unload(false);
             common.Unload(false);
+
+            StartCoroutine(CallShit());
             finalerpit.targetlevel = tsi.nextlevel;
             finalerpit.targetbundle = tsi.nextbundle;
+
+
         }
 
         public void Start()
