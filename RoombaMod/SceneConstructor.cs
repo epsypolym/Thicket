@@ -110,13 +110,14 @@ namespace Thicket
 
         IEnumerator CallShit() 
         {
-            yield return new WaitForSeconds(0.25f);
+            //yield return new WaitForSeconds(0.25f);
             //test
             GameObject.Find("Player/Main Camera").GetComponent<CameraController>().enabled = true;
             GameObject.Find("Player/Main Camera").GetComponent<CameraController>().SendMessage("Awake");
             GameObject.Find("GameController").GetComponent<PostProcessV2_Handler>().SendMessage("Start");
             //var sman = GameObject.Find("StatsManager(Clone)").GetComponent<StatsManager>();
             //sman.enabled = true;
+            yield return new WaitForEndOfFrame();
             //typeof(PostProcessV2_Handler).GetField("mainCam", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(MonoSingleton<CameraController>.Instance, MonoSingleton<CameraController>.Instance.cam);
         }
 

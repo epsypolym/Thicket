@@ -91,6 +91,8 @@ namespace Thicket
 
         public static void LoadLevel(string bundlename, string levelname)
         {
+            try { AssetBundle.UnloadAllAssetBundles(false); }
+            catch { }
             targetbundle = bundlename;
             targetlevel = levelname;
             try
