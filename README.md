@@ -14,6 +14,4 @@ how it works:
 
 
 Cool Disclaimer:
-- thicket doesn't work anymore after the halloween update and i'm too lazy to fix it
-- i suspect the issue is somewhere in the new post processing the camera does
-- so go fix that in your own fork or give a pull request i'll accept it if it works
+- thicket works now but it's slightly brokey
