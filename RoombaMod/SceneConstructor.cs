@@ -87,7 +87,7 @@ namespace Thicket
 
             lsc = GameObject.Find("Canvas/Level Stats Controller");
             var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
-            ReflectionExtensions.SetPrivate(ls, "ready", true);
+            ls.SetPrivate("ready", true);
 
             Component.Destroy(GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<LevelNameFinder>()); // destroy this so level end text is correct
             Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
