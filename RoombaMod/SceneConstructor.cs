@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 namespace Thicket
@@ -69,7 +70,8 @@ namespace Thicket
             firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
             firstroom.transform.position = tsi.firstroomtransformposition;
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
-
+            AudioMixerController shit = firstroom.transform.GetChild(4).GetComponent<AudioMixerController>();
+            // set value of AudioMixerController.Instance to shit TODO
 
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
             finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"), go.transform);
@@ -80,22 +82,24 @@ namespace Thicket
             fp = finalroom.transform.GetChild(3).GetChild(1).gameObject.GetComponent<FinalPit>();
             ReflectionExtensions.SetPrivate(fp, "levelNumber", 1337);
             finalerpit = finalroom.transform.GetChild(5).GetChild(8).gameObject.AddComponent<FinalerPit>(); // add finaler pit level transitioner
-
-
+            
             go.SetActive(true);
-            StartCoroutine(CallShit()); 
+            
+            StartCoroutine(CallShit());
 
             lsc = GameObject.Find("Canvas/Level Stats Controller");
             var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
             ls.SetPrivate("ready", true);
+
+            var audioMixerController = FindObjectOfType<AudioMixerController>();
+            var audioMixerControllerField = typeof(AudioMixerController).GetField("Instance", BindingFlags.NonPublic | BindingFlags.Static);
+            audioMixerControllerField.SetValue(null, audioMixerController);
 
             Component.Destroy(GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<LevelNameFinder>()); // destroy this so level end text is correct
             Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
             lsc.SetActive(true);
             ls.levelName.text = tsi.levelname;
-
-            
         }
 
         IEnumerator CallShit() // fix the stupid fucking camera manager FUCK YOU!!!!!!!!!!!!!!!!!!!!!!!!!! ih ate camera manager!@!!!!!!!!!!!!!!!!!!!!!!
@@ -103,7 +107,7 @@ namespace Thicket
             GameObject.Find("Player/Main Camera").GetComponent<CameraController>().enabled = true;
             GameObject.Find("Player/Main Camera").GetComponent<CameraController>().SendMessage("Awake");
             GameObject.Find("GameController").GetComponent<PostProcessV2_Handler>().SendMessage("Start");
-            
+
             yield return new WaitForEndOfFrame();
         }
 
