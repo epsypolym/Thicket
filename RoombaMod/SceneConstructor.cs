@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -21,7 +22,17 @@ namespace Thicket
 
         public void FetchPrefabs(string bundlename)
         { 
-            common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
+            MapLoader.Instance.EnsureCommonIsLoaded();
+            //common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
+            //common = MapLoader.Instance.GetPrivate<Dictionary<string, AssetBundle>>("loadedBundles")["common"];
+            foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
+                if (bundle.name == "common") {
+                    common = bundle;
+                    break;
+                }
+            }
+
+            Debug.Log("Null?" + (common == null));
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
         }
 

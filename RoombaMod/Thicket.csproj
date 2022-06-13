@@ -165,6 +165,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>COPY "$(TargetPath)" "D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins"</PostBuildEvent>
+    <!--<PostBuildEvent>COPY "$(TargetPath)" "D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins"</PostBuildEvent>-->
   </PropertyGroup>
 </Project>
