@@ -67,10 +67,11 @@ namespace Thicket
         private void OnLevelLoaded(Scene level, LoadSceneMode mode) {
             Debug.Log("AAAAAAAAAAH");
             //nuke all bundles because unity (works fine though c: )
-            try { AssetBundle.UnloadAllAssetBundles(false); }
-            catch { }
             if (SceneManager.GetActiveScene().name == "dreamedzone")
             {
+                //try { AssetBundle.UnloadAllAssetBundles(false); }
+                //catch { }
+
                 GameObject.Find("FirstRoomLoader").AddComponent<SceneConstructor>();
                 //i have to do this otherwise the engine wholeheartedly refuses to add scene constructor
                 //just trust me dude this is some arcane bullshit
@@ -91,8 +92,8 @@ namespace Thicket
 
         public static void LoadLevel(string bundlename, string levelname)
         {
-            try { AssetBundle.UnloadAllAssetBundles(false); }
-            catch { }
+            //try { AssetBundle.UnloadAllAssetBundles(false); }
+            //catch { }
             targetbundle = bundlename;
             targetlevel = levelname;
             try
