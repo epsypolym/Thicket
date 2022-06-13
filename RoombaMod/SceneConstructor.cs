@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Thicket
 {
+    [DefaultExecutionOrder(-100)]
     class SceneConstructor : MonoBehaviour
     {
         public GameObject lsc;
