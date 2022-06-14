@@ -80,8 +80,6 @@ namespace Thicket
             finalerpit = finalroom.transform.GetChild(5).GetChild(8).gameObject.AddComponent<FinalerPit>(); // add finaler pit level transitioner
             
             go.SetActive(true);
-            
-            StartCoroutine(CallShit());
 
             lsc = GameObject.Find("Canvas/Level Stats Controller");
             var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
@@ -92,15 +90,6 @@ namespace Thicket
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
             lsc.SetActive(true);
             ls.levelName.text = tsi.levelname;
-        }
-
-        IEnumerator CallShit() // fix the stupid fucking camera manager FUCK YOU!!!!!!!!!!!!!!!!!!!!!!!!!! ih ate camera manager!@!!!!!!!!!!!!!!!!!!!!!!
-        {
-            GameObject.Find("Player/Main Camera").GetComponent<CameraController>().enabled = true;
-            GameObject.Find("Player/Main Camera").GetComponent<CameraController>().SendMessage("Awake");
-            GameObject.Find("GameController").GetComponent<PostProcessV2_Handler>().SendMessage("Start");
-
-            yield return new WaitForEndOfFrame();
         }
 
         public void ConstructLevel(string levelname)
