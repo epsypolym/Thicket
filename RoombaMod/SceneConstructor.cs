@@ -8,7 +8,6 @@ using UnityEngine;
 
 namespace Thicket
 {
-    [DefaultExecutionOrder(-100)]
     class SceneConstructor : MonoBehaviour
     {
         public GameObject lsc;
@@ -24,16 +23,14 @@ namespace Thicket
 
         public void FetchPrefabs(string bundlename)
         { 
-            MapLoader.Instance.EnsureCommonIsLoaded();
-            //common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
-            //common = MapLoader.Instance.GetPrivate<Dictionary<string, AssetBundle>>("loadedBundles")["common"];
-            foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
+            //MapLoader.Instance.EnsureCommonIsLoaded();
+            /*foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
                 if (bundle.name == "common") {
-                    common = bundle;
+                    bundle.Unload(false);
                     break;
                 }
-            }
-
+            }*/
+            common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
             Debug.Log("Null?" + (common == null));
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
         }
@@ -70,7 +67,7 @@ namespace Thicket
             firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
             firstroom.transform.position = tsi.firstroomtransformposition;
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
-            AudioMixerController shit = firstroom.transform.GetChild(4).GetComponent<AudioMixerController>();
+            //AudioMixerController shit = firstroom.transform.GetChild(4).GetComponent<AudioMixerController>();
             // set value of AudioMixerController.Instance to shit TODO
 
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
@@ -137,8 +134,8 @@ namespace Thicket
 
             levelbundle.Unload(false);
             common.Unload(false);
+            //MapLoader.Instance.isCommonLoaded = false;
 
-            
             finalerpit.targetlevel = tsi.nextlevel;
             finalerpit.targetbundle = tsi.nextbundle;
 
