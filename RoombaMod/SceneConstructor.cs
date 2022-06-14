@@ -23,13 +23,12 @@ namespace Thicket
 
         public void FetchPrefabs(string bundlename)
         { 
-            //MapLoader.Instance.EnsureCommonIsLoaded();
-            /*foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
+            foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
                 if (bundle.name == "common") {
                     bundle.Unload(false);
                     break;
                 }
-            }*/
+            }
             common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
             Debug.Log("Null?" + (common == null));
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
@@ -134,7 +133,7 @@ namespace Thicket
 
             levelbundle.Unload(false);
             common.Unload(false);
-            //MapLoader.Instance.isCommonLoaded = false;
+            MapLoader.Instance.isCommonLoaded = false;
 
             finalerpit.targetlevel = tsi.nextlevel;
             finalerpit.targetbundle = tsi.nextbundle;
