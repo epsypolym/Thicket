@@ -66,8 +66,8 @@ namespace Thicket
             firstroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FirstRoom"), go.transform);
             firstroom.transform.position = tsi.firstroomtransformposition;
             firstroom.transform.rotation = Quaternion.Euler(tsi.firstroomtransformrotation);
-            //AudioMixerController shit = firstroom.transform.GetChild(4).GetComponent<AudioMixerController>();
-            // set value of AudioMixerController.Instance to shit TODO
+            AudioMixerController shit = firstroom.transform.GetChild(4).GetComponent<AudioMixerController>();
+            shit.transform.SetParent(null);
 
             // FINAL ROOM SPAWN, POSITION AND RECONFIG
             finalroom = GameObject.Instantiate(common.LoadAsset<GameObject>("FinalRoom"), go.transform);
@@ -86,11 +86,7 @@ namespace Thicket
             lsc = GameObject.Find("Canvas/Level Stats Controller");
             var ls = lsc.transform.GetChild(0).GetComponent<LevelStats>();
             ls.SetPrivate("ready", true);
-
-            var audioMixerController = FindObjectOfType<AudioMixerController>();
-            var audioMixerControllerField = typeof(AudioMixerController).GetField("Instance", BindingFlags.NonPublic | BindingFlags.Static);
-            audioMixerControllerField.SetValue(null, audioMixerController);
-
+            
             Component.Destroy(GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<LevelNameFinder>()); // destroy this so level end text is correct
             Thicket.levelstatthing = GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Challenge - Title"); // reference if this exists
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
