@@ -23,6 +23,10 @@ namespace Thicket
         public GameObject[] secretObjects;
         public Texture2D skyboxtexture;
 
+        public AudioClip calmMusic;
+        public AudioClip battleMusic;
+        public AudioClip bossMusic;
+
     }
 }
     
