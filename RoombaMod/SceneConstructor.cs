@@ -94,6 +94,8 @@ namespace Thicket
             MusicManager.Instance.cleanTheme.clip = tsi.calmMusic;
             MusicManager.Instance.battleTheme.clip = tsi.battleMusic;
             MusicManager.Instance.bossTheme.clip = tsi.bossMusic;
+            
+            StatsManager.Instance.secretObjects = tsi.secretObjects;
         }
 
         public void ConstructLevel(string levelname)
