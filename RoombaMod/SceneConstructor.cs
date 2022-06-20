@@ -90,12 +90,6 @@ namespace Thicket
             GameObject.Find("Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text").GetComponent<UnityEngine.UI.Text>().text = tsi.levelname;
             lsc.SetActive(true);
             ls.levelName.text = tsi.levelname;
-
-            MusicManager.Instance.cleanTheme.clip = tsi.calmMusic;
-            MusicManager.Instance.battleTheme.clip = tsi.battleMusic;
-            MusicManager.Instance.bossTheme.clip = tsi.bossMusic;
-            
-            StatsManager.Instance.secretObjects = tsi.secretObjects;
         }
 
         public void ConstructLevel(string levelname)
@@ -130,6 +124,12 @@ namespace Thicket
             finalerpit.targetbundle = tsi.nextbundle;
 
             StartCoroutine(openthestupidfuckingdoor());
+            
+            MusicManager.Instance.cleanTheme.clip = tsi.calmMusic;
+            MusicManager.Instance.battleTheme.clip = tsi.battleMusic;
+            MusicManager.Instance.bossTheme.clip = tsi.bossMusic;
+            
+            StatsManager.Instance.secretObjects = tsi.secretObjects;
         }
 
         public void Start()
