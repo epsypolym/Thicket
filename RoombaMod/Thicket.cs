@@ -115,7 +115,7 @@ namespace Thicket
             Debug.Log("Loaded ThicketSceneInfo");
             if (tsi.DependencyModGuids != null) {
                 foreach (ModDependency dependency in tsi.DependencyModGuids) {
-                    if (!loadedMods.Contains<>(dependency.guid)) {
+                    if (!loadedMods.ContainsKey(dependency.guid)) {
                         errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
                     } else {
                         Version currentVersion = loadedMods[dependency.guid];
