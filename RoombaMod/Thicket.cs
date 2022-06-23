@@ -105,20 +105,26 @@ namespace Thicket
             targetbundle = bundlename;
             targetlevel = levelname;
 
+            Debug.Log("Initing load");
+            
             List<string> errorLog = new List<string>();
             AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(modsdir, bundlename));
+            Debug.Log("Bundle loaded");
             ThicketSceneInfo tsi = bundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
-            foreach (ModDependency dependency in tsi.dependencyModGuids) {
-                if (loadedMods[dependency.guid] == null) {
-                    errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
-                } else {
-                    Version currentVersion = loadedMods[dependency.guid];
-                    Version minimumVersion = new Version(dependency.minimumVersion);
-                    if (minimumVersion > currentVersion) {
-                        errorLog.Add($"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
+            Debug.Log("Loaded ThicketSceneInfo");
+            if(tsi.dependencyModGuids != null)
+                foreach (ModDependency dependency in tsi.dependencyModGuids) {
+                    if (loadedMods[dependency.guid] == null) {
+                        errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
+                    } else {
+                        Version currentVersion = loadedMods[dependency.guid];
+                        Version minimumVersion = new Version(dependency.minimumVersion);
+                        if (minimumVersion > currentVersion) {
+                            errorLog.Add($"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
+                        }
                     }
                 }
-            }
+            Debug.Log("Dependency checked");
 
             if (errorLog.Count > 0) {
                 Debug.LogError($"Some mods are missing or are outdated for the level {bundlename}! Please resolve the issue.");
@@ -162,7 +168,7 @@ namespace Thicket
             }
             if (UnityEngine.Input.GetKeyDown(KeyCode.PageDown))
             {
-                LoadLevel("roomba.unity3d", "minosmap1.prefab");
+                LoadLevel("test.unity3d", "testlevel.prefab");
             }
             if (loadnewlevel && UnityEngine.Input.GetKeyDown(KeyCode.Mouse0) && levelstatthing.activeSelf)
             {
