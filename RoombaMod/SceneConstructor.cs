@@ -31,6 +31,13 @@ namespace Thicket
             }
             common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
             Debug.Log("Null?" + (common == null));
+            
+            foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
+                if (bundle.name != bundlename) continue;
+                levelbundle = bundle;
+                return;
+            }
+            
             levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
         }
 
@@ -132,8 +139,7 @@ namespace Thicket
             StatsManager.Instance.secretObjects = tsi.secretObjects;
         }
 
-        public void Start()
-        {
+        public void Start() {
             FetchPrefabs(Thicket.targetbundle);
             ConstructLevel(Thicket.targetlevel);
 

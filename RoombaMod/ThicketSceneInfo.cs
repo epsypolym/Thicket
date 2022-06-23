@@ -27,6 +27,7 @@ namespace Thicket
         public AudioClip battleMusic;
         public AudioClip bossMusic;
 
+        public ModDependency[] dependencyModGuids;
     }
 }
     

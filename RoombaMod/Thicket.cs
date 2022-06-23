@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using BepInEx;
+using BepInEx.Bootstrap;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.UI;
@@ -47,21 +48,28 @@ namespace Thicket
         public GameObject frl;
         public static string targetbundle;
         public static string targetlevel;
+        public static Dictionary<string, Version> loadedMods;
 
-        
-        
+
         internal void Awake() {
             var harmony = new Harmony(BuildInfo.Guid); // rename "author" and "project"
             harmony.PatchAll();
         }
 
-        public void Start()
-        {
+        public void Start() {
+            loadedMods = new Dictionary<string, Version>();
             modsdir = Directory.GetParent(Application.dataPath).ToString() + "\\BepInEx\\plugins";
             commondir = Directory.GetParent(Application.dataPath).ToString() + "\\ULTRAKILL_Data\\StreamingAssets";
 
             SceneManager.sceneLoaded += OnLevelLoaded;
             SceneManager.activeSceneChanged += OnLevelLoad;
+            
+            // print loaded mods
+            foreach (var keyValuePair in Chainloader.PluginInfos) {
+                string key = keyValuePair.Key;
+                PluginInfo mod = keyValuePair.Value;
+                loadedMods.Add(mod.Metadata.GUID, mod.Metadata.Version);
+            }
         }
 
         private void OnLevelLoaded(Scene level, LoadSceneMode mode) {
@@ -90,12 +98,39 @@ namespace Thicket
             FinalerPit.userinput = false;
         }
 
-        public static void LoadLevel(string bundlename, string levelname)
+        public static bool LoadLevel(string bundlename, string levelname)
         {
             //try { AssetBundle.UnloadAllAssetBundles(false); }
             //catch { }
             targetbundle = bundlename;
             targetlevel = levelname;
+
+            List<string> errorLog = new List<string>();
+            AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(modsdir, bundlename));
+            ThicketSceneInfo tsi = bundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
+            foreach (ModDependency dependency in tsi.dependencyModGuids) {
+                if (loadedMods[dependency.guid] == null) {
+                    errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
+                } else {
+                    Version currentVersion = loadedMods[dependency.guid];
+                    Version minimumVersion = new Version(dependency.minimumVersion);
+                    if (minimumVersion > currentVersion) {
+                        errorLog.Add($"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
+                    }
+                }
+            }
+
+            if (errorLog.Count > 0) {
+                Debug.LogError($"Some mods are missing or are outdated for the level {bundlename}! Please resolve the issue.");
+                foreach (string s in errorLog) {
+                    Debug.LogError(s);
+                }
+                Debug.LogError("");
+                Debug.LogError("BE CAUTIOUS WHEN DOWNLOADING MODS FROM THE INTERNET. ALWAYS CHECK IF IT'S OPEN SOURCE. WE DO NOT TAKE RESPONSIBILITY.");
+                bundle.Unload(false);
+                return false;
+            }
+            
             try
             { // unload empty level prefab just in case
                 dreamed.Unload(true);
@@ -112,6 +147,7 @@ namespace Thicket
             dreamed = AssetBundle.LoadFromFile(Path.Combine(modsdir, "dreamed.unity3d"));
             var scenePath = dreamed.GetAllScenePaths();
             SceneManager.LoadScene(scenePath[0]);
+            return true;
         }
 
 

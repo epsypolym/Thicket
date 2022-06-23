@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnemySpawner.cs" />
+    <Compile Include="ModDependency.cs" />
     <Compile Include="Orphanise.cs" />
     <Compile Include="PostProcessFixer.cs" />
     <Compile Include="ReflectionExtensions.cs" />
