@@ -27,7 +27,23 @@ namespace Thicket
         public AudioClip battleMusic;
         public AudioClip bossMusic;
 
-        public ModDependency[] dependencyModGuids = new ModDependency[] { };
+        [SerializeField] private string[] _dependencyMods;
+
+        public ModDependency[] DependencyModGuids {
+            get {
+                ModDependency[] modDependencies = new ModDependency[_dependencyMods.Length];
+                for (int i = 0; i < _dependencyMods.Length; i++) {
+                    string[] split = _dependencyMods[i].Split('|');
+                    modDependencies[i] = new ModDependency() {
+                        guid = split[0],
+                        downloadLink = split[1],
+                        minimumVersion = split[2]
+                    };
+                }
+
+                return modDependencies;
+            }
+        }
     }
 }
     

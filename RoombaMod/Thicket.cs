@@ -112,8 +112,8 @@ namespace Thicket
             Debug.Log("Bundle loaded");
             ThicketSceneInfo tsi = bundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
             Debug.Log("Loaded ThicketSceneInfo");
-            if (tsi.dependencyModGuids != null) {
-                foreach (ModDependency dependency in tsi.dependencyModGuids) {
+            if (tsi.DependencyModGuids != null) {
+                foreach (ModDependency dependency in tsi.DependencyModGuids) {
                     if (loadedMods[dependency.guid] == null) {
                         errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
                     } else {
