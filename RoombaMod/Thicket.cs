@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using BepInEx;
 using BepInEx.Bootstrap;
 using HarmonyLib;
@@ -114,14 +115,14 @@ namespace Thicket
             Debug.Log("Loaded ThicketSceneInfo");
             if (tsi.DependencyModGuids != null) {
                 foreach (ModDependency dependency in tsi.DependencyModGuids) {
-                    if (loadedMods[dependency.guid] == null) {
+                    if (!loadedMods.Contains<>(dependency.guid)) {
                         errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
                     } else {
                         Version currentVersion = loadedMods[dependency.guid];
                         Version minimumVersion = new Version(dependency.minimumVersion);
                         if (minimumVersion > currentVersion) {
                             errorLog.Add(
-                                $"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
+                                $"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}. Current version: {currentVersion}, Required version: {minimumVersion}");
                         }
                     }
                 }
