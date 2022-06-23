@@ -112,7 +112,7 @@ namespace Thicket
             Debug.Log("Bundle loaded");
             ThicketSceneInfo tsi = bundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
             Debug.Log("Loaded ThicketSceneInfo");
-            if(tsi.dependencyModGuids != null)
+            if (tsi.dependencyModGuids != null) {
                 foreach (ModDependency dependency in tsi.dependencyModGuids) {
                     if (loadedMods[dependency.guid] == null) {
                         errorLog.Add($"Missing mod {dependency.guid}! Please download: {dependency.downloadLink}");
@@ -120,11 +120,16 @@ namespace Thicket
                         Version currentVersion = loadedMods[dependency.guid];
                         Version minimumVersion = new Version(dependency.minimumVersion);
                         if (minimumVersion > currentVersion) {
-                            errorLog.Add($"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
+                            errorLog.Add(
+                                $"Out of date mod {dependency.guid}! Please update: {dependency.downloadLink}");
                         }
                     }
                 }
-            Debug.Log("Dependency checked");
+
+                Debug.Log("Dependency checked");
+            } else {
+                Debug.Log("Dependencies not found");
+            }
 
             if (errorLog.Count > 0) {
                 Debug.LogError($"Some mods are missing or are outdated for the level {bundlename}! Please resolve the issue.");

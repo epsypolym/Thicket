@@ -1,10 +1,12 @@
 using System;
+using JetBrains.Annotations;
+using UnityEngine;
 
 namespace Thicket {
     [Serializable]
     public struct ModDependency {
-        public string guid;
-        public string downloadLink;
-        public string minimumVersion;
+        [SerializeField] public string guid;
+        [SerializeField]public string downloadLink;
+        [SerializeField] public string minimumVersion;
     }
 }
