@@ -73,6 +73,21 @@ namespace Thicket
             }
         }
 
+        private string guiBundle = "test.unity3d"; 
+        private string guiLevel = "testlevel.prefab"; 
+        
+        private void OnGUI() {
+            if (SceneManager.GetActiveScene().name == "Main Menu") {
+                // create text box where users can type in stuff
+                GUI.Box(new Rect(10, 10, 200, 25), "Enter bundle and level name:");
+                guiBundle = GUI.TextField(new Rect(10, 35, 200, 25), guiBundle);
+                guiLevel = GUI.TextField(new Rect(10, 60, 200, 25), guiLevel);
+                if (GUI.Button(new Rect(10, 85, 200, 25), "Load level")) {
+                    LoadLevel(guiBundle, guiLevel);
+                }
+            }
+        }
+
         private void OnLevelLoaded(Scene level, LoadSceneMode mode) {
             Debug.Log("AAAAAAAAAAH");
             //nuke all bundles because unity (works fine though c: )
