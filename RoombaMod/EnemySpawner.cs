@@ -18,6 +18,7 @@ namespace Thicket
         
         void Start() {
             var joe = GameObject.Instantiate(SceneConstructor.bestiary[(int)enemyVar].gameObject);
+            joe.SetActive(false);
             joe.transform.parent = transform.parent;
             joe.transform.localPosition = transform.localPosition;
             joe.transform.localRotation = transform.localRotation;
@@ -37,6 +38,7 @@ namespace Thicket
                     field.SetValue(c, field.GetValue(component));
                 }
             }
+            joe.SetActive(true);
         }
     }
 }
