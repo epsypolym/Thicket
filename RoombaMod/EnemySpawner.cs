@@ -29,7 +29,7 @@ namespace Thicket
                 if (component is EnemySpawner) continue;
                 Component c;
                 if(!joe.TryGetComponent(component.GetType(), out c)) {
-                    joe.AddComponent(component.GetType());
+                    c = joe.AddComponent(component.GetType());
                 }
                 // set all fields to match
                 var fields = component.GetType().GetFields();
