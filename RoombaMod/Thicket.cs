@@ -124,7 +124,15 @@ namespace Thicket
             Debug.Log("Initing load");
             
             List<string> errorLog = new List<string>();
-            AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(modsdir, bundlename));
+            AssetBundle bundle = null;
+            bool foundBundle = false;
+            foreach (var b in AssetBundle.GetAllLoadedAssetBundles()) {
+                if (b.name != bundlename) continue;
+                bundle = b;
+                foundBundle = true;
+                break;
+            }
+            if(!foundBundle) bundle = AssetBundle.LoadFromFile(Path.Combine(modsdir, bundlename));
             Debug.Log("Bundle loaded");
             ThicketSceneInfo tsi = bundle.LoadAsset<GameObject>(levelname).GetComponent<ThicketSceneInfo>();
             Debug.Log("Loaded ThicketSceneInfo");
