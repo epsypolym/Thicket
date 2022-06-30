@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Thicket
 {
+    [DefaultExecutionOrder(-1000)]
     class SceneConstructor : MonoBehaviour
     {
         public GameObject lsc;
@@ -139,7 +140,7 @@ namespace Thicket
             StatsManager.Instance.secretObjects = tsi.secretObjects;
         }
 
-        public void Start() {
+        public void Awake() {
             FetchPrefabs(Thicket.targetbundle);
             ConstructLevel(Thicket.targetlevel);
 
@@ -148,7 +149,7 @@ namespace Thicket
         }
 
 
-        
+
         IEnumerator openthestupidfuckingdoor()
         {
             yield return new WaitForSeconds(2);
