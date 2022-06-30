@@ -121,7 +121,7 @@ namespace Thicket
             targetbundle = bundlename;
             targetlevel = levelname;
 
-            Debug.Log("Initing load");
+            Debug.Log($"Initing load {bundlename} {levelname}");
             
             List<string> errorLog = new List<string>();
             AssetBundle bundle = null;
@@ -130,6 +130,7 @@ namespace Thicket
                 if (b.name != bundlename) continue;
                 bundle = b;
                 foundBundle = true;
+                Debug.Log(("Found bundle loaded"));
                 break;
             }
             if(!foundBundle) bundle = AssetBundle.LoadFromFile(Path.Combine(modsdir, bundlename));
@@ -179,7 +180,16 @@ namespace Thicket
             {
                 GameObject.Find("Canvas").transform.GetChild(31).gameObject.SetActive(true);
             }
-            dreamed = AssetBundle.LoadFromFile(Path.Combine(modsdir, "dreamed.unity3d"));
+
+            foundBundle = false;
+            foreach (var b in AssetBundle.GetAllLoadedAssetBundles()) {
+                if (b.name != "dreamed.unity3d") continue;
+                dreamed = b;
+                foundBundle = true;
+                Debug.Log(("Found dreamed loaded"));
+                break;
+            }
+            if(!foundBundle) dreamed = AssetBundle.LoadFromFile(Path.Combine(modsdir, "dreamed.unity3d"));
             var scenePath = dreamed.GetAllScenePaths();
             SceneManager.LoadScene(scenePath[0]);
             return true;
