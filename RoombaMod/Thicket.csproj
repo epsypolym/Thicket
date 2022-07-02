@@ -150,6 +150,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssetBundleHelper.cs" />
     <Compile Include="EnemySpawner.cs" />
     <Compile Include="ModDependency.cs" />
     <Compile Include="Orphanise.cs" />
