@@ -33,13 +33,7 @@ namespace Thicket
             common = AssetBundle.LoadFromFile(Path.Combine(Thicket.commondir, "common"));
             Debug.Log("Null?" + (common == null));
             
-            foreach (var bundle in AssetBundle.GetAllLoadedAssetBundles()) {
-                if (bundle.name != bundlename) continue;
-                levelbundle = bundle;
-                return;
-            }
-            
-            levelbundle = AssetBundle.LoadFromFile(Path.Combine(Thicket.modsdir, bundlename));
+            levelbundle = AssetBundleHelper.FindOrCreate(Thicket.modsdir, bundlename);
         }
 
 
